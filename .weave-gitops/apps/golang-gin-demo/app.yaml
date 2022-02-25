@@ -1,0 +1,15 @@
+---
+apiVersion: wego.weave.works/v1alpha1
+kind: Application
+metadata:
+  labels:
+    wego.weave.works/app-identifier: wego-39461827db869cdca5eee59551066398
+  name: golang-gin-demo
+  namespace: wego-system
+spec:
+  branch: main
+  config_url: ssh://git@github.com/songkang1993/gitops-config.git
+  deployment_type: kustomize
+  path: ./deploy/kubernetes
+  source_type: git
+  url: ssh://git@github.com/songkang1993/golang-gin-demo.git
